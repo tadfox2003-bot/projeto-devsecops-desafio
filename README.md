@@ -43,4 +43,4 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 
 
 ## URL de Produção
-https://tadfox2003-bot.github.io/projeto-devsecops-desafio/](https://tadfox2003-bot.github.io/projeto-devsecops-desafio/)
+(https://tadfox2003-bot.github.io/projeto-devsecops-desafio/)
