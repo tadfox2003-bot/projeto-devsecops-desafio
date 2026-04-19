@@ -1,9 +1,0 @@
-{
-  "status": "Conectado ao Banco de Dados",
-  "versao_do_banco": "v1.0.0",
-  "itens": [
-    { "id": 1, "task": "Implementar a pipeline de segurança" },
-    { "id": 2, "task": "Corrigir as vulnerabilidades do projeto" },
-    { "id": 3, "task": "Fazer o deploy em produção" }
-  ]
-}
