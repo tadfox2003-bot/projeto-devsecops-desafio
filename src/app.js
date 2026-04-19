@@ -5,10 +5,11 @@ async function carregarDados() {
     const data = await response.json();
 
     // Atualiza status do sistema
-    document.getElementById('status').textContent = data.status;
+    document.getElementById('db-status').textContent = data.status;
+    document.getElementById('db-version').textContent = data.versao_do_banco;
 
     // Renderiza tarefas
-    const lista = document.getElementById('lista-tarefas');
+    const lista = document.getElementById('task-list');
     lista.innerHTML = '';
     data.itens.forEach(item => {
       const li = document.createElement('li');
@@ -16,17 +17,17 @@ async function carregarDados() {
       lista.appendChild(li);
     });
   } catch (error) {
-    document.getElementById('status').textContent = 'Erro ao conectar!';
+    document.getElementById('db-status').textContent = 'Erro ao conectar!';
     console.error('Erro ao carregar db.json:', error);
   }
 }
 
 // Função para adicionar nova tarefa
-function adicionarTarefa() {
-  const input = document.getElementById('nova-tarefa');
+function addTask() {
+  const input = document.getElementById('new-task');
   const tarefa = input.value.trim();
   if (tarefa) {
-    const lista = document.getElementById('lista-tarefas');
+    const lista = document.getElementById('task-list');
     const li = document.createElement('li');
     li.textContent = tarefa;
     lista.appendChild(li);
@@ -37,5 +38,5 @@ function adicionarTarefa() {
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
   carregarDados();
-  document.getElementById('btn-adicionar').addEventListener('click', adicionarTarefa);
 });
+
