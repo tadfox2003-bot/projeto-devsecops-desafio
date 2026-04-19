@@ -48,7 +48,10 @@ jobs:
       # ✅ PASSO 6: Deploy (só roda se tudo passar)
       - name: 🌐 Configurar GitHub Pages
         uses: actions/configure-pages@v4
-
+        with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+           enablement: true
+ 
       - name: 📤 Upload para Produção
         uses: actions/upload-pages-artifact@v3
         with:
