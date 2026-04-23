@@ -32,11 +32,13 @@ jobs:
       # ✅ PASSO 3: Secrets Scanning com Gitleaks
       - name: 🔑 Secrets Scanning
         uses: gitleaks/gitleaks-action@v2
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       # ✅ PASSO 4: SAST com Semgrep
       - name: 🔍 SAST - Semgrep
         run: |
-          pip install semgrep
+          pip install semgrep --quiet
           semgrep scan --config auto --error src/
 
       # ✅ PASSO 5: SCA com Grype
