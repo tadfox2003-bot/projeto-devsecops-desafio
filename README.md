@@ -22,6 +22,10 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 - [ ] Deploy com **GitHub Pages**
 
 ## Como a pipeline funciona
+
+A pipeline foi criada para automatizar verificações de segurança e o deploy do Gerenciador de Tarefas no GitHub Pages.
+Ela roda sempre que há um push na branch principal ou quando é disparada manualmente e trava quando detecta erro ou algum código exposto.
+
 🔐 Pipeline DevSecOps — Explicação dos Steps
 1. 📥 Checkout do Código
 •	O que faz: Baixa o código do repositório para o ambiente de execução do GitHub Actions.
