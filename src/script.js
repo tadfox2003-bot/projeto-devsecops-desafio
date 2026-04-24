@@ -1,7 +1,7 @@
 // ❌ NÃO coloque credenciais no código.
 // ✅ Use variáveis de ambiente ou arquivos de configuração seguros.
-const API_KEY = process.env.API_KEY;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const API_KEY = VALOR_API;
+const DB_PASSWORD = SENHA_BANCO_DE_DADOS;
 
 // Busca tarefas do "banco de dados"
 fetch('db.json')
